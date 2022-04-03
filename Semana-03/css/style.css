@@ -1,0 +1,253 @@
+body {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+a:link,
+a:visited a:active {
+    text-decoration: none;
+}
+
+header {
+    position: absolute;
+    width: 1110px;
+    height: 100px;
+    left: 220px;
+    top: 0;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    color: #373867;
+}
+
+.conteiner1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.redes {
+    display: inline-block;
+    width: 4%;
+    list-style: square;
+    list-style: none;
+    padding: 10px;
+    float: right;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 5px;
+}
+
+.fotos {
+    width: 220%;
+    height: 220%;
+}
+
+.fakehr {
+    width: 99%;
+    height: 3px;
+    background-color: #AACE9B;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+aside {
+    float: left;
+    width: 220px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    padding: 7px;
+    margin-top: 0;
+    position: fixed;
+}
+
+.h2-sidebar {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+
+    color: #373867;
+}
+
+.linea-verde {
+    width: 78px;
+    height: 2px;
+    background-color: #AACE9B;
+    margin-top: 0;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+
+.linea-verde-larga {
+    width: 175px;
+    height: 2px;
+    background-color: #AACE9B;
+    margin-top: 0;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.lista-side {
+    left: 6.08%;
+    right: 80.54%;
+    top: 22.63%;
+    bottom: 75.31%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.7141px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.linea-larga {
+    width: 220px;
+    height: 2px;
+    background-color: #555553;
+    padding-top: 0;
+    box-shadow: 0.2px, 0.2px;
+    margin-bottom: 5px;
+}
+
+.ult-linea-larga {
+    width: 220px;
+    height: 2px;
+    background-color: #555553;
+    padding-top: 0;
+    box-shadow: 0.2px, 0.2px;
+    margin-bottom: 30px;
+}
+
+.text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.info-contacto {
+    margin-top: 17px;
+    display: inline-block;
+    width: 256px;
+}
+
+.logos {
+    display: block;
+    width: max-content;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.logos img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.logos p {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #46A37C;
+}
+
+main {
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+.section1 {
+    display: inline-block;
+}
+
+.section1 h2 {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+color: #373867;
+line-height: 56px;
+margin-bottom: 15px;
+}
+
+.section1 h3 {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+color: #373867;
+line-height: 23px;
+margin-bottom: 10px;
+}
+
+.section1 p {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #373867;
+line-height: 24px;
+padding: 5px;
+margin-bottom: 20px;
+}
+
+.section1 img {
+    float: right;
+    width: 500px;
+    height: 300px;
+}
+
+.boton-learn-more {
+background: #FFFFFF;
+border: 3px solid #AACE9B;
+box-sizing: border-box;
+border-radius: 5px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+color: #AACE9B;
+padding: 5px 30px 5px;
+}
+
+.fakehr1 {
+    width: 100%;
+    height: 3px;
+    background-color: #AACE9B;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
