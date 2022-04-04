@@ -256,6 +256,7 @@ main {
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
+    font-weight: bold;
     line-height: 23px;
     color: #373867;
     margin-bottom: 10px;
@@ -274,12 +275,12 @@ main {
     width: 120px;
     height: 120px;
     margin: 15px;
-    overflow:hidden;
+    overflow: hidden;
     border-radius: 3px;
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    position:relative;
+    position: relative;
     -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
 }
@@ -308,4 +309,77 @@ main {
     text-align: center;
     padding: 0 15px 15px 15px;
     margin: 0 10px 10px 10px;
+}
+
+.why-choose-us {
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+}
+
+.why-choose-us h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #373867;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.div-why-choose-us {
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+    padding: 15px;
+}
+
+.div-why-choose-us1 {
+    display: inline-block;
+    width: 22%;
+    margin: 5px;
+    padding: 15px;
+}
+
+.div-why-choose-us1 img {
+    width: 255px;
+    height: 255px;
+}
+
+.why-choose-us h5 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: left;
+    color: #373867;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.why-choose-us p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #373867;
+    margin-bottom: 5px;
+}
+
+.fakehr2 {
+    display: inline-block;
+    height: 360px; 
+    margin: 0px -15px -5px 15px  ; 
+    border-left: 1px solid black;
+}
+
+.fakehr2b {
+    display: inline-block;
+    height: 360px; 
+    margin: 0px -15px -5px -1px  ; 
+    border-left: 1px solid black;
 }
