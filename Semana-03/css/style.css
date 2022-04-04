@@ -250,3 +250,62 @@ main {
     margin-top: 10px;
     margin-bottom: 15px;
 }
+
+.titulo-features {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 23px;
+    color: #373867;
+    margin-bottom: 10px;
+}
+
+.div-features {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    margin: 30px;
+    padding: 15px;
+}
+
+.img-rombo {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    overflow:hidden;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position:relative;
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+}
+
+.img-rombo img {
+    transform: rotate(-45deg);
+    padding: 10px;
+}
+
+.text-features {
+    display: inline-block;
+    width: 50%;
+    margin: 0 10px 10px 10px;
+    padding: 0 15px 15px 15px;
+}
+
+.text-features h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #373867;
+    text-align: center;
+    padding: 0 15px 15px 15px;
+    margin: 0 10px 10px 10px;
+}
