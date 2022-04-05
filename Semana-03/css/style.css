@@ -196,6 +196,8 @@ main {
     color: #373867;
     line-height: 56px;
     margin-bottom: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .section1 h3 {
@@ -207,6 +209,7 @@ main {
     color: #373867;
     line-height: 23px;
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .section1 p {
@@ -219,6 +222,7 @@ main {
     line-height: 24px;
     padding: 5px;
     margin-bottom: 20px;
+    margin-left: 5px;
 }
 
 .section1 img {
@@ -241,12 +245,13 @@ main {
     text-align: center;
     color: #AACE9B;
     padding: 5px 30px 5px;
+    margin-left: 5px;
 }
 
 .fakehr1 {
     width: 100%;
-    height: 3px;
-    background-color: #AACE9B;
+    height: 1px;
+    background-color: #5e5f5d;
     margin-top: 10px;
     margin-bottom: 15px;
 }
@@ -260,6 +265,8 @@ main {
     line-height: 23px;
     color: #373867;
     margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 .div-features {
@@ -327,6 +334,7 @@ main {
     color: #373867;
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 5px;
 }
 
 .div-why-choose-us {
@@ -372,14 +380,294 @@ main {
 
 .fakehr2 {
     display: inline-block;
-    height: 360px; 
-    margin: 0px -15px -5px 15px  ; 
+    height: 360px;
+    margin: 0px -15px -5px 15px;
     border-left: 1px solid black;
 }
 
 .fakehr2b {
     display: inline-block;
-    height: 360px; 
-    margin: 0px -15px -5px -1px  ; 
+    height: 360px;
+    margin: 0px -15px -5px -1px;
     border-left: 1px solid black;
+}
+
+.form {
+    display: inline-block;
+    width: 1050px;
+    height: 370px;
+}
+
+.form h5 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #373867;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.email-and-name {
+    display: inline-block;
+    width: 1050px;
+}
+
+.name {
+    padding: 10px 12px 10px 5px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 520px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.email {
+    padding: 10px 12px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 520px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.contact-area {
+    padding: 10px 12px 10px 5px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 520px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.message {
+    padding: 10px 12px 10px 5px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 1045px;
+    height: 130px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.button-form {
+    display: inline-block;
+    width: 450px;
+}
+
+.button-send-message-reset {
+    width: 190px;
+    height: 45px;
+    background: #AACE9B;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #373867;
+}
+
+.our-history {
+    display: inline-block;
+    width: 1050px;
+    height: 625px;
+}
+
+.our-history h5 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #373867;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.line-our-history {
+    width: 125px;
+    height: 0px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    margin-left: 7px;
+}
+
+.our-history h6 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 22px;
+    color: #373867;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.text-our-beginings {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #373867;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.div-crucial-moments {
+    display: inline-block;
+    width: 1050px;
+    height: 250px;
+}
+
+.div-crucial-moments img {
+    width: 250px;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.div-crucial-moments p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 14px;
+    color: #373867;
+    margin-top: 55px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.div-crucial-moments2 {
+    display: inline-block;
+    width: 1050px;
+    height: 250px;
+}
+
+.div-crucial-moments2 img {
+    width: 250px;
+    height: 150px;
+    float: right;
+}
+
+.div-crucial-moments2 p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 14px;
+    color: #373867;
+    margin-top: 45px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.section-products-features-business {
+    display: inline-block;
+    width: 1050px;
+    height: 115px;
+    margin-top: 25px;
+}
+
+.section-products-features-business h6 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #373867;
+    margin-bottom: 10px;
+}
+
+.section-products-features-business li {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+ol {
+    margin-left: 15px;
+}
+
+.div-products {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 130px;
+}
+
+.div-business {
+    display: inline-block;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.div-support {
+    display: inline-block;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.fakehr-footer {
+    width: 100%;
+    height: 3px;
+    background-color: #AACE9B;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+.footer-img {
+    display: inline-block;
+    margin-left: 370px;
+    margin-right: 300px;
+}
+
+.redes-footer {
+    display: inline-block;
+    width: 4%;
+    list-style: square;
+    list-style: none;
+    padding: 10px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 5px;
+}
+
+footer p {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #373867;
 }
