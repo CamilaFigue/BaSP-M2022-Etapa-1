@@ -1,0 +1,83 @@
+main {
+    width: 100%;
+}
+
+.section-i-am-trackgenix {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-i-am-trackgenix img {
+    width: 320px;
+    height: 240px;
+    margin-top: 10px;
+}
+
+.conteiner-img1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteiner-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    min-width: 300px;
+    flex-wrap: wrap-reverse;
+}
+
+.section-i-am-trackgenix h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #373867;
+    line-height: 56px;
+    justify-content: center;
+    width: 320px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.section-i-am-trackgenix h3 {
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #373867;
+    height: 45px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.section-i-am-trackgenix p {
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #373867;
+    width: 317px;
+    height: 146px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.section-i-am-trackgenix button {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px;
+    height: 46px;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 320px;
+}
