@@ -14,7 +14,7 @@ main {
 .section-i-am-trackgenix img {
     width: 350px;
     height: 260px;
-    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .conteiner-text {
@@ -86,6 +86,7 @@ main {
     text-align: center;
     color: #373867;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .div-features {
@@ -137,4 +138,58 @@ main {
 
 .img-rhombus img {
     transform: rotate(-45deg);
+}
+
+.why-choose-us {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.why-choose-us h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #373867;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.div-why-choose-us {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    min-width: 300px;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-why-choose-us img {
+    width: 350px;
+    height: 230px;
+}
+
+.why-choose-us h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #373867;
+    margin: 15px 0 5px 0;
+}
+
+.why-choose-us p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #373867;
 }
