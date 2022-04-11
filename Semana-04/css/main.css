@@ -5,28 +5,24 @@ main {
 .section-i-am-trackgenix {
     width: 100%;
     display: flex;
-    padding-bottom: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    align-items: center;
 }
 
 .section-i-am-trackgenix img {
-    width: 320px;
-    height: 240px;
+    width: 350px;
+    height: 260px;
     margin-top: 10px;
-}
-
-.conteiner-img1 {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .conteiner-text {
     display: flex;
     flex-direction: column;
-    max-width: 60%;
+    max-width: 40%;
     min-width: 300px;
-    flex-wrap: wrap-reverse;
+    align-items: center;
 }
 
 .section-i-am-trackgenix h2 {
@@ -35,15 +31,12 @@ main {
     font-size: 48px;
     line-height: 56px;
     color: #373867;
-    line-height: 56px;
-    justify-content: center;
-    width: 320px;
     text-align: center;
     margin-top: 10px;
+    width: 320px;
 }
 
 .section-i-am-trackgenix h3 {
-    display: flex;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -52,11 +45,9 @@ main {
     height: 45px;
     text-align: center;
     margin-top: 10px;
-    justify-content: center;
 }
 
 .section-i-am-trackgenix p {
-    display: flex;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -66,18 +57,84 @@ main {
     width: 317px;
     height: 146px;
     margin-top: 10px;
-    justify-content: center;
 }
 
 .section-i-am-trackgenix button {
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 10px;
     height: 46px;
     background: #FFFFFF;
     border: 3px solid #AACE9B;
     box-sizing: border-box;
     border-radius: 5px;
     margin-top: 20px;
-    width: 320px;
+    width: 170px;
+}
+
+.section-features {
+    width: 100%;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.title-features {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #373867;
+    width: 100%;
+}
+
+.div-features {
+    display: flex;
+    padding: 10px;
+    vertical-align: middle;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 300px;
+    align-items: center;
+}
+
+.text-features {
+    width: 60%;
+}
+
+.text-features h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.text-features p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #373867;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.img-rhombus {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+    margin: 15px;
+}
+
+.img-rhombus img {
+    transform: rotate(-45deg);
 }
