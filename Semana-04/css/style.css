@@ -50,8 +50,20 @@ a:visited a:active {
     aside {
         display: none;
     }
+}
 
+@media (min-width: 1439px) {
+    header {
+        margin-left: 320px;
+    }
     main {
-        width: 1120px;
+        margin-left: 320px;
+    }
+    footer {
+        margin-left: 320px;
+    }
+    .fakehr {
+        margin-left: 320px;
+        width: 100%;
     }
 }
