@@ -314,7 +314,7 @@ form {
 .div-crucial-moments {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .div-crucial-moments img {
@@ -339,7 +339,7 @@ form {
     display: flex;
     flex-wrap: wrap-reverse;
     vertical-align: middle;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .div-crucial-moments2 img {
