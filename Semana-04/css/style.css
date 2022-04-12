@@ -21,6 +21,14 @@ a:visited a:active {
     margin-bottom: 30px;
 }
 
+.fakehr-footer {
+    width: 100%;
+    height: 3px;
+    background-color: #AACE9B;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 @media (min-width: 440px) {
     .fakehr2 {
         display: none;
@@ -38,8 +46,12 @@ a:visited a:active {
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
     aside {
         display: none;
+    }
+
+    main {
+        width: 1120px;
     }
 }

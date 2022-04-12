@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 15px 30px;
+}
+
+footer p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #373867;
+}
