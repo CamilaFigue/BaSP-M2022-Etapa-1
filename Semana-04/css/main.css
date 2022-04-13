@@ -311,6 +311,10 @@ form {
     margin-bottom: 5px;
 }
 
+.conteiner-crucial {
+    width: 100%;
+}
+
 .div-crucial-moments {
     display: flex;
     flex-wrap: wrap;
@@ -320,8 +324,6 @@ form {
 .div-crucial-moments img {
     width: 350px;
     height: 150px;
-    margin-bottom: 10px;
-    margin-left: 15px;
 }
 
 .div-crucial-moments p {
@@ -333,21 +335,20 @@ form {
     color: #373867;
     width: 350px;
     margin-top: 10px;
+    flex-grow: 1;
+    align-self: center;
+    margin-left: 30px;
 }
 
 .div-crucial-moments2 {
     display: flex;
     flex-wrap: wrap-reverse;
-    vertical-align: middle;
     justify-content: space-around;
 }
 
 .div-crucial-moments2 img {
     width: 350px;
     height: 150px;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .div-crucial-moments2 p {
@@ -357,6 +358,12 @@ form {
     line-height: 14px;
     color: #373867;
     width: 350px;
+    flex-grow: 1;
+    align-self: center;
+    margin-left: 30px;
+    flex-grow: 1;
+    align-self: center;
+    margin-left: 30px;
 }
 
 .list-order {
@@ -405,18 +412,30 @@ form {
     .div-why-choose-us {
         display: flex;
         flex: wrap;
-        width: 20%;
+        width: 22%;
         justify-content: space-around;
     }
 
     .div-why-choose-us1 img {
-        width: 200px;
+        width: 150px;
         height: 200px;
         justify-content: space-around;
     }
 
+    .img-leadership {
+        width: 15%;
+    }
+
     .fakehr2 {
-        display: none;
+        display: inline-block;
+        height: 330px;
+        border-left: 1px solid black;
+    }
+
+    .fakehr3 {
+        display: inline-block;
+        height: 330px;
+        border-left: 0.5px solid black;
     }
 
     .our-history h5 {

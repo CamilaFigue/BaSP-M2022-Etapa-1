@@ -36,7 +36,7 @@ a:visited a:active {
 }
 
 @media (min-width: 768px) {
-    .fakehr2 {
+    .fakehr3 {
         display: flex;
         height: 320px;
         margin: 7px 15px 5px 15px;
