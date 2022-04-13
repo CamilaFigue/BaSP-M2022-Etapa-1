@@ -20,6 +20,12 @@ finally the style.css with the new desing of the landing page.
 There you will see the last changes.
 ```
 
+## Week 04 - Folder
+```
+This week, we did the design of the page with css
+applying the flex box property and we also made it responsive.
+```
+
 ## Contact
 E-mail: Camilafigue2@gmail.com
 
