@@ -2,7 +2,7 @@
 
 // excercise a
 
-var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 console.log ("ex03-arrays A: Los meses 5 y 11 son:", meses[4], "y", meses[10]);
 
