@@ -333,7 +333,7 @@ form {
     line-height: 14px;
     text-align: center;
     color: #373867;
-    width: 350px;
+    width: 400px;
     margin-top: 10px;
     flex-grow: 1;
     align-self: center;
@@ -357,7 +357,7 @@ form {
     font-size: 12px;
     line-height: 14px;
     color: #373867;
-    width: 350px;
+    width: 400px;
     flex-grow: 1;
     align-self: center;
     margin-left: 30px;
@@ -369,6 +369,7 @@ form {
 .list-order {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .list-order div {
