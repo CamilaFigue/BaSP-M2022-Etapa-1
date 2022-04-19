@@ -26,6 +26,12 @@ This week, we did the design of the page with css
 applying the flex box property and we also made it responsive.
 ```
 
+## Week 05 - Folder
+```
+This week, we did javascript excercises and some design corrections of the page with css,
+applying the flex box property and we also made it responsive.
+```
+
 ## Contact
 E-mail: Camilafigue2@gmail.com
 
