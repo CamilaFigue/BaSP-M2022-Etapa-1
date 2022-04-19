@@ -56,3 +56,9 @@ nav {
     width: 25px;
     height: 25px;
 }
+
+@media (min-width: 1440px) {
+    header {
+        margin-left: 320px;
+    }
+}

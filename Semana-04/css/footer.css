@@ -1,23 +1,36 @@
 footer {
+    width: 100%;
+}
+
+.conteiner-footer {
     display: flex;
     flex-direction: column;
 }
 
 footer ul {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 footer li {
-    display: inline-block;
+    display: flex;
     margin: 15px 30px;
 }
 
 footer p {
+    width: 100%;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
     color: #373867;
+}
+
+@media (min-width: 1440px) {
+    footer {
+        margin-left: 320px;
+    }
 }
