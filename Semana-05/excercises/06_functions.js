@@ -34,7 +34,7 @@ function validateInteger(num) {
 }
 
 console.log("ex06-Functions C: Resultado:", validateInteger(22));
-console.log("ex06-Functions C: Resultado:", validateInteger(0.22));
+console.log("ex06-Functions C: Resultado:", validateInteger(22.222));
 
 //excercise d
 
@@ -49,7 +49,7 @@ function validarEntero(num1, num2) {
 }
 
 console.log("ex06-Functions D: Resultado:", validarEntero(22, 44));
-console.log("ex06-Functions D: Resultado:", validarEntero(0.22, 0.44));
+console.log("ex06-Functions D: Resultado:", validarEntero(0.222, 0.444));
 
 //excercise e
 
@@ -57,5 +57,5 @@ function suma2(a, b) {
     return validarEntero(a, b);
 }
 
-var resultado2 = suma2(22, 0.44);
+var resultado2 = suma2(22, 0.444);
 console.log("ex06-Functions E: Resultado:", resultado2);
