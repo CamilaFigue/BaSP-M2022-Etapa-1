@@ -32,6 +32,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     width: 680px;
+    height: 700px;
     border: 3px solid rgba(0, 0, 0, 0.5);
     border-radius: 149px;
 }
@@ -140,6 +141,7 @@ form a {
 @media (min-width: 1440px) {
     main {
         margin-left: 320px;
+        width: 1440px;
     }
 
     .fakehr-footer {
