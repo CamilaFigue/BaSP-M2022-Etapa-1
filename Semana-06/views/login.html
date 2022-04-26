@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/aside.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <script src="../javascript/login.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
@@ -100,23 +101,27 @@
             </h1>
             <form>
                 <div class="email">
-                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="email" id="mail" placeholder="Email">
+                    <p id="emailInvalid"></p>
                 </div>
                 <div class="password">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" id="pass" placeholder="Password">
+                    <p id="passInvalid"></p>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="remember"> Remember me
                     </label>
                 </div>
-                <button class="sign-in">
-                    Sign In
+                <button class="sign-in" id="sign-in-js">
+                    
+                        Sign In
+                    
                 </button>
                 <button class="sign-up">
-                    Sign Up
+                    <a href="./sign-up.html"> Sign Up </a>                    
                 </button>
-                <a>Forgot your password?</a>
+                <a class="forgotPass">Forgot your password?</a>
             </form>
         </section>
     </main>

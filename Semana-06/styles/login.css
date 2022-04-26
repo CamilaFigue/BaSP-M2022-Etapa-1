@@ -109,7 +109,11 @@ label input {
     border-radius: 5px;
 }
 
-form a {
+.sign-up a {
+    color: white;
+}
+
+.forgotPass {
     display: flex;
     flex-wrap: wrap;
     font-style: normal;
