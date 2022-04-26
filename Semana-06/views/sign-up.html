@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/aside.css">
     <link rel="stylesheet" href="../styles/sign-up.css">
-    <link rel="stylesheet" href="../styles/footer.css">body {
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="../javascript/sign-up.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
@@ -99,26 +100,47 @@
                 Sign up
             </h1>
             <form>
-                <div class="name">
-                    <h2>Name</h2>
-                    <input type="text" name="name" placeholder="Name">
-                    <h2>Last Name</h2>
-                    <input type="text" name="last-name" placeholder="Last Name">
-                </div>
-                <div class="email">
-                    <h2>Email</h2>
-                    <input type="text" name="email" placeholder="Email">
-                    <h2>Password</h2>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="repeat-password">
-                    <h2>Repeat Password</h2>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="div-confirm">
-                    <button class="confirm">
-                        Confirm
-                    </button>
+                <div class="div-form-signUp">
+                    <div class="first-div">
+                        <h2>Name</h2>
+                        <input type="text" id="name" name="name" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                        <h2>Last Name</h2>
+                        <input type="text" id="lastName" name="last-name" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                        <h2>DNI</h2>
+                        <input type="number" id="dni" name="name" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                        <h2>Date of Birthday</h2>
+                        <input type="text" id="birthday" name="last-name" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                        <h2>Telephone</h2>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                        <h2>Adress</h2>
+                        <input type="text" id="adress" name="adress" placeholder="Click here to tipe">
+                        <p class="blurFocusContainer"></p>
+                    </div>
+                    <div class="second-div">
+                        <h2>Location</h2>
+                        <input type="text" id="location" name="location" placeholder="Click here to tipe">
+                        <div class="blurFocusContainer"></div>
+                        <h2>Post Code</h2>
+                        <input type="number" id="postCode" name="postCode" placeholder="Click here to tipe">
+                        <div class="blurFocusContainer"></div>
+                        <h2>Email</h2>
+                        <input type="email" id="mail" name="email" placeholder="Click here to tipe">
+                        <div class="blurFocusContainer"></div>
+                        <h2>Password</h2>
+                        <input type="password" id="password" name="password" placeholder="Click here to tipe">
+                        <div class="blurFocusContainer"></div>
+                        <h2>Repeat Password</h2>
+                        <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Click here to tipe">
+                        <div class="blurFocusContainer"></div>
+                        <button id="btnConfirm">
+                            Confirm
+                        </button>
+                    </div>
                 </div>
                 <a>Forgot your password?</a>
             </form>
