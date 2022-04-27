@@ -32,6 +32,11 @@ This week, we did javascript excercises and some design corrections of the page 
 applying the flex box property and we also made it responsive.
 ```
 
+## Week 06 - Folder
+```
+This week, we did interactive the page with the validations in javascrip.
+```
+
 ## Contact
 E-mail: Camilafigue2@gmail.com
 
