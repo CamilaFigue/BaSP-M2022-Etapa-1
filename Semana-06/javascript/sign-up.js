@@ -1,6 +1,5 @@
 window.onload = function () {
 
-    var confirmBtn = document.getElementById("btnConfirm");
     var containerFocusBlur = document.getElementsByClassName("blurFocusContainer");
 
     /////////////////// NAME ///////////////////
@@ -19,6 +18,14 @@ window.onload = function () {
     function blurfName() {
         var fName = firstName.value;
         flagName = 1;
+
+        if (fName == "") {
+            containerFocusBlur[0].textContent = "Name cannot be empty";
+            firstName.style.border = "3px solid black";
+            firstName.style.color = "black";
+            containerFocusBlur[0].style = "color: red; font-size: 16px";
+            containerFocusBlur[0].style.display = "flex";
+        }
 
         for (var i = 0; i < fName.length; i++) {
             var letterName = fName.substring(i, i + 1);
@@ -57,6 +64,14 @@ window.onload = function () {
         var lName = lastName.value;
         flagLname = 1;
 
+        if (lName == "") {
+            containerFocusBlur[1].textContent = "Last Name cannot be empty";
+            lastName.style.border = "3px solid black";
+            lastName.style.color = "black";
+            containerFocusBlur[1].style = "color: red; font-size: 16px";
+            containerFocusBlur[1].style.display = "flex";
+        }
+
         for (var i = 0; i < lName.length; i++) {
 
             var letterLname = lName.substring(i, i + 1);
@@ -80,6 +95,7 @@ window.onload = function () {
 
     /////////////////// DNI ///////////////////
     var dNi = document.getElementById("dni");
+    var flagDni = 1;
 
     dNi.addEventListener("focus", focusdNi);
     dNi.addEventListener("blur", blurdNi);
@@ -91,6 +107,14 @@ window.onload = function () {
 
     function blurdNi() {
         var dNiValue = dNi.value;
+
+        if (dNiValue == "") {
+            containerFocusBlur[2].textContent = "DNI cannot be empty";
+            dNi.style.border = "3px solid black";
+            dNi.style.color = "black";
+            containerFocusBlur[2].style = "color: red; font-size: 16px";
+            containerFocusBlur[2].style.display = "flex";
+        }
 
         if (dNiValue.length > 6) {
             var countLetters = 0;
@@ -116,6 +140,7 @@ window.onload = function () {
             } else {
                 dNi.style.border = "3px solid green";
                 dNi.style.color = "black";
+                flag = 1;
             }
         } else {
             containerFocusBlur[2].textContent = "ID should contain more than 7 characters";
@@ -128,6 +153,8 @@ window.onload = function () {
 
     /////////////////// DATE OF BIRTHDAY ///////////////////
     var birth = document.getElementById("birthday");
+
+    var flagBirth = 1;
 
     birth.addEventListener("focus", focusBirth);
     birth.addEventListener("blur", blurBirth);
@@ -145,6 +172,14 @@ window.onload = function () {
         var month = birthdayValue.substring(3, 5);
         var secondSlash = birthdayValue.substring(5, 6);
         var year = birthdayValue.substring(6, 10);
+
+        if (birthdayValue == "") {
+            containerFocusBlur[3].textContent = "Birthday cannot be empty";
+            birth.style.border = "3px solid black";
+            birth.style.color = "black";
+            containerFocusBlur[3].style = "color: red; font-size: 16px";
+            containerFocusBlur[3].style.display = "flex";
+        }
 
         day = Number(day);
         month = Number(month);
@@ -177,11 +212,13 @@ window.onload = function () {
         } else {
             birth.style.border = "3px solid green";
             birth.style.color = "black";
+            flagBirth = 1;
         }
     }
 
     /////////////////// TELEPHONE ///////////////////
     var phone = document.getElementById("telephone");
+    var flagPhone = 1;
 
     phone.addEventListener("focus", focusPhone);
     phone.addEventListener("blur", blurPhone);
@@ -194,10 +231,19 @@ window.onload = function () {
     function blurPhone() {
         var phoneValue = phone.value;
 
+        if (phoneValue == "") {
+            containerFocusBlur[4].textContent = "Phone cannot be empty";
+            phone.style.border = "3px solid black";
+            phone.style.color = "black";
+            containerFocusBlur[4].style = "color: red; font-size: 16px";
+            containerFocusBlur[4].style.display = "flex";
+        }
+
         if ((phoneValue == Number(phoneValue)) && (phoneValue.length == 10)) {
             phone.style.border = "3px solid green";
             phone.style.color = "black";
             containerFocusBlur[4].textContent = "";
+            flagPhone = 1;
         } else {
             containerFocusBlur[4].textContent = "Telephone should contain 10 characters";
             phone.style.border = "3px solid red";
@@ -210,6 +256,8 @@ window.onload = function () {
     /////////////////// ADRESS ///////////////////
     var adreSs = document.getElementById("adress");
 
+    var flagAdress = 1;
+
     adreSs.addEventListener("focus", focusAdress);
     adreSs.addEventListener("blur", blurAdress);
 
@@ -220,6 +268,14 @@ window.onload = function () {
 
     function blurAdress() {
         var adressValue = adreSs.value;
+
+        if (adressValue == "") {
+            containerFocusBlur[5].textContent = "Adress cannot be empty";
+            adreSs.style.border = "3px solid black";
+            adreSs.style.color = "black";
+            containerFocusBlur[5].style = "color: red; font-size: 16px";
+            containerFocusBlur[5].style.display = "flex";
+        }
 
         if (adressValue.length < 5) {
             console.log(adressValue);
@@ -264,6 +320,7 @@ window.onload = function () {
                     adreSs.style.border = "3px solid green";
                     adreSs.style.color = "black";
                     containerFocusBlur[5].textContent = "";
+                    flagAdress = 1;
                 } else {
                     containerFocusBlur[5].textContent = "The format is not valid, insert numbers and letters";
                     adreSs.style.border = "3px solid red";
@@ -278,6 +335,8 @@ window.onload = function () {
     /////////////////// LOCATION ///////////////////
     var city = document.getElementById("location");
     var cityIsValid = false;
+
+    var locationFlag = 1;
 
     city.addEventListener("focus", focusCity);
     city.addEventListener("blur", blurCity);
@@ -309,6 +368,14 @@ window.onload = function () {
 
     function blurCity() {
 
+        if (cityValue == "") {
+            containerFocusBlur[6].textContent = "City cannot be empty";
+            city.style.border = "3px solid black";
+            city.style.color = "black";
+            containerFocusBlur[6].style = "color: red; font-size: 16px";
+            containerFocusBlur[6].style.display = "flex";
+        }
+
         cityIsValid = validateCity();
 
         if (!cityIsValid) {
@@ -321,12 +388,15 @@ window.onload = function () {
             city.style.border = "3px solid green";
             city.style.color = "black";
             containerFocusBlur[6].textContent = "";
+            locationFlag = 1;
         }
 
     }
 
     /////////////////// POST CODE ///////////////////
     var codePost = document.getElementById("postCode");
+
+    var codePostFlag = 1;
 
     codePost.addEventListener("focus", focusCodePost);
     codePost.addEventListener("blur", blurCodePost);
@@ -339,10 +409,19 @@ window.onload = function () {
     function blurCodePost() {
         var codePostValue = codePost.value;
 
+        if (codePostValue == "") {
+            containerFocusBlur[7].textContent = "City cannot be empty";
+            codePost.style.border = "3px solid black";
+            codePost.style.color = "black";
+            containerFocusBlur[7].style = "color: red; font-size: 16px";
+            containerFocusBlur[7].style.display = "flex";
+        }
+
         if ((codePostValue == Number(codePostValue)) && ((codePostValue.length == 4) || (codePostValue.length == 5))) {
             codePost.style.border = "3px solid green";
             codePost.style.color = "black";
             containerFocusBlur[7].textContent = "";
+            codePostFlag = 1;
         } else {
             containerFocusBlur[7].textContent = "Code Post should contain 4 or 5 characters";
             codePost.style.border = "3px solid red";
@@ -356,6 +435,8 @@ window.onload = function () {
     var email = document.getElementById("mail");
     var mailformat = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
+    var emailFlag = 1;
+
     email.addEventListener("focus", focusEmail);
     email.addEventListener("blur", blurEmail);
 
@@ -367,6 +448,14 @@ window.onload = function () {
     function blurEmail() {
         var emailIsValid = mailformat.test(email.value);
 
+        if (email.value == "") {
+            containerFocusBlur[8].textContent = "Email cannot be empty";
+            email.style.border = "3px solid black";
+            email.style.color = "black";
+            containerFocusBlur[8].style = "color: red; font-size: 16px";
+            containerFocusBlur[8].style.display = "flex";
+        }
+
         if (!emailIsValid) {
             containerFocusBlur[8].textContent = "The email is invalid, it need to have this format example@example.com";
             email.style.border = "3px solid red";
@@ -377,11 +466,14 @@ window.onload = function () {
             email.style.border = "3px solid green";
             email.style.color = "black";
             containerFocusBlur[8].textContent = "";
+            emailFlag = 1;
         }
     }
 
     /////////////////// PASSWORD ///////////////////
     var pass = document.getElementById("password");
+
+    var passFlag = 1; 
 
     pass.addEventListener("focus", focusPass);
     pass.addEventListener("blur", blurPass);
@@ -413,6 +505,14 @@ window.onload = function () {
     function blurPass() {
         passIsValid = validatePassword();
 
+        if (passwordValue == "") {
+            containerFocusBlur[9].textContent = "Password cannot be empty";
+            pass.style.border = "3px solid black";
+            pass.style.color = "black";
+            containerFocusBlur[9].style = "color: red; font-size: 16px";
+            containerFocusBlur[9].style.display = "flex";
+        }
+
         if (!passIsValid) {
             containerFocusBlur[9].textContent = "The password is invalid, it need to have numbers and letter only";
             pass.style.border = "3px solid red";
@@ -423,11 +523,14 @@ window.onload = function () {
             pass.style.border = "3px solid green";
             pass.style.color = "black";
             containerFocusBlur[9].textContent = "";
+            passFlag = 1;
         }
     }
 
     /////////////////// REPEAT - PASSWORD ///////////////////
     var repeatPass = document.getElementById("repeatPassword");
+
+    var flagRepeat = 1;
 
     repeatPass.addEventListener("focus", focusRepeatPass);
     repeatPass.addEventListener("blur", blurRepeatPass);
@@ -440,6 +543,15 @@ window.onload = function () {
     function blurRepeatPass() {
         var repeatPassValue = repeatPass.value;
         var valuePassword = pass.value;
+
+        if (repeatPasswordValue == "") {
+            containerFocusBlur[10].textContent = "Repeat Password cannot be empty";
+            repeatPass.style.border = "3px solid black";
+            repeatPass.style.color = "black";
+            containerFocusBlur[10].style = "color: red; font-size: 16px";
+            containerFocusBlur[10].style.display = "flex";
+        }
+
         if (repeatPassValue == valuePassword) {
             repeatPass.style.border = "3px solid green";
             repeatPass.style.color = "black";
@@ -450,6 +562,41 @@ window.onload = function () {
             repeatPass.style.color = "red";
             containerFocusBlur[10].style = "color: red; font-size: 16px";
             containerFocusBlur[10].style.display = "flex";
+        }
+    }
+
+    /////////////////// BOTON CONFIRM ///////////////////
+    var confirmBtn = document.getElementById("btnConfirm");
+
+    var modal = document.getElementById("myModal");
+    var btnConfirm = document.getElementById("sign-in-js");
+    var close = document.getElementsByClassName("closeSpan");
+
+    btnConfirm.onclick = function (e) {
+        e.preventDefault();
+
+        var modalTitle = document.getElementById("titleModal");
+
+        modal.style.display = "block";
+        if (flagName == 1 && flagLname == 1 && flagDni == 1 && flagBirth == 1 && flagPhone == 1) {
+            modalTitle.textContent = 'Logged fail';
+            text.textContent = 'Email: ' + email.value + ' is not valid';
+        } else if (passIsValid == 2) {
+            modalTitle.textContent = 'Login failed';
+            text.textContent = 'Password: ' + password.value + ' not valid';
+        } else {
+            modalTitle.textContent = 'Login Succefull';
+            text.textContent = "Email: " + email.value + " Password: " + password.value;
+        }
+    }
+
+    close.onclick = function () {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
     }
 

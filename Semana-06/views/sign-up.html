@@ -23,7 +23,7 @@
         <div class="line-green"></div>
         <ul>
             <li class="list-sidebar">
-                Home
+                <a href="./index.html"> Home </a>
             </li>
             <div class="line-long"></div>
             <li class="list-sidebar">
@@ -31,7 +31,7 @@
             </li>
             <div class="line-long"></div>
             <li class="list-sidebar">
-                Login
+                <a href="./login.html"> Login </a>
             </li>
             <div class="last-line-long"></div>
         </ul>
@@ -65,7 +65,7 @@
         <div class="menu-burguer">
             <img src="../assets/hamburguer.png">
             <h1>
-                Trackgenix
+                <a href="./index.html">Trackgenix</a>
             </h1>
         </div>
         <nav>
@@ -96,57 +96,66 @@
     <div class="fakehr"></div>
     <main>
         <section>
-            <h1>
+            <h2 class="titleSignUp">
                 Sign up
-            </h1>
+            </h2>
             <form>
-                <div class="div-form-signUp">
-                    <div class="first-div">
-                        <h2>Name</h2>
-                        <input type="text" id="name" name="name" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                        <h2>Last Name</h2>
-                        <input type="text" id="lastName" name="last-name" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                        <h2>DNI</h2>
-                        <input type="text" id="dni" name="name" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                        <h2>Date of Birthday</h2>
-                        <input type="text" id="birthday" name="last-name" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                        <h2>Telephone</h2>
-                        <input type="tel" id="telephone" name="telephone" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                        <h2>Adress</h2>
-                        <input type="text" id="adress" name="adress" placeholder="Click here to tipe">
-                        <p class="blurFocusContainer"></p>
-                    </div>
-                    <div class="second-div">
-                        <h2>City</h2>
-                        <input type="text" id="location" name="location" placeholder="Click here to tipe">
-                        <div class="blurFocusContainer"></div>
-                        <h2>Post Code</h2>
-                        <input type="text" id="postCode" name="postCode" placeholder="Click here to tipe">
-                        <div class="blurFocusContainer"></div>
-                        <h2>Email</h2>
-                        <input type="email" id="mail" name="email" placeholder="Click here to tipe">
-                        <div class="blurFocusContainer"></div>
-                        <h2>Password</h2>
-                        <input type="password" id="password" name="password" placeholder="Click here to tipe">
-                        <div class="blurFocusContainer"></div>
-                        <h2>Repeat Password</h2>
-                        <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Click here to tipe">
-                        <div class="blurFocusContainer"></div>
-                        <button id="btnConfirm">
-                            Confirm
-                        </button>
-                    </div>
+                <div class="first-div">
+                    <h2>Name</h2>
+                    <input type="text" id="name" name="name" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                    <h2>Last Name</h2>
+                    <input type="text" id="lastName" name="last-name" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                    <h2>DNI</h2>
+                    <input type="text" id="dni" name="name" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                    <h2>Date of Birthday</h2>
+                    <input type="text" id="birthday" name="last-name" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                    <h2>Telephone</h2>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                    <h2>Adress</h2>
+                    <input type="text" id="adress" name="adress" placeholder="Click here to tipe">
+                    <p class="blurFocusContainer"></p>
+                </div>
+                <div class="second-div">
+                    <h2>City</h2>
+                    <input type="text" id="location" name="location" placeholder="Click here to tipe">
+                    <div class="blurFocusContainer"></div>
+                    <h2>Post Code</h2>
+                    <input type="text" id="postCode" name="postCode" placeholder="Click here to tipe">
+                    <div class="blurFocusContainer"></div>
+                    <h2>Email</h2>
+                    <input type="email" id="mail" name="email" placeholder="Click here to tipe">
+                    <div class="blurFocusContainer"></div>
+                    <h2>Password</h2>
+                    <input type="password" id="password" name="password" placeholder="Click here to tipe">
+                    <div class="blurFocusContainer"></div>
+                    <h2>Repeat Password</h2>
+                    <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Click here to tipe">
+                    <div class="blurFocusContainer"></div>
+                    <button id="btnConfirm">
+                        Confirm
+                    </button>
                 </div>
                 <a>Forgot your password?</a>
             </form>
         </section>
     </main>
     <div class="fakehr-footer"></div>
+    <div class="modal-content" id="myModal">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="closeSpan">&times;</span>
+                <h2 id="titleModal"></h2>
+            </div>
+            <div class="modal-body">
+                <p id="emailPassModalText"></p>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="conteiner-footer">
             <ul>
