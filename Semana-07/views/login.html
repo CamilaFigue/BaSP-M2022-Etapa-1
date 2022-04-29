@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Siete</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="../javascript/login.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <div class="menu-burguer">
+            <img src="../assets/hamburguer.png">
+            <h1>
+                <a href="./index.html">Trackgenix</a>
+            </h1>
+        </div>
+        <nav>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.linkedin.com/in/radium-rocket/" target="_blank">
+                        <img class="photo" src="../assets/linkedin-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/radiumrocket" target="_blank">
+                        <img class="photo" src="../assets/twitter-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/radiumrocket?_rdc=1&_rdr" target="_blank">
+                        <img class="photo" src="../assets/facebook-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/radium.rocket/" target="_blank">
+                        <img class="photo" src="../assets/instagram-logo1.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="fakehr"></div>
+    <main>
+        <section>
+            <h2>
+                Sign in
+            </h2>
+            <form>
+                <div class="email">
+                    <input type="text" name="email" id="mail" placeholder="Email">
+                    <p id="emailInvalid"></p>
+                </div>
+                <div class="password">
+                    <input type="password" name="password" id="pass" placeholder="Password">
+                    <p id="passInvalid"></p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <button class="sign-in" id="sign-in-js">
+
+                    Sign In
+
+                </button>
+                <button class="sign-up">
+                    <a href="./sign-up.html"> Sign Up </a>
+                </button>
+                <a class="forgotPass">Forgot your password?</a>
+            </form>
+        </section>
+    </main>
+    <div class="fakehr-footer"></div>
+    <div class="modal-content" id="myModal">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="closeSpan">&times;</span>
+                <h2 id="titleModal"></h2>
+            </div>
+            <div class="modal-body">
+                <p id="emailPassModalText"></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="conteiner-footer">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/radium-rocket/" target="_blank">
+                        <img src="../assets/linkedin-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/radiumrocket" target="_blank">
+                        <img src="../assets/twitter-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/radiumrocket?_rdc=1&_rdr" target="_blank">
+                        <img src="../assets/facebook-logo1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/radium.rocket/" target="_blank">
+                        <img src="../assets/instagram-logo1.png">
+                    </a>
+                </li>
+            </ul>
+            <p>
+                Rosario, Argentina
+            </p>
+            <p>
+                Copyright © 2022 Trackgenix SA. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

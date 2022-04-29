@@ -1,0 +1,94 @@
+aside {
+    display: flex;
+    position: fixed;
+    width: 310px;
+    height: 100%;
+}
+
+.h2-sidebar {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    color: #373867;
+    text-decoration: underline;
+}
+
+.list-sidebar {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.7141px;
+    line-height: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.line-long {
+    width: 220px;
+    height: 2px;
+    background-color: #555553;
+    box-shadow: 0.2px, 0.2px;
+    margin-bottom: 5px;
+}
+
+.last-line-long {
+    width: 220px;
+    height: 2px;
+    background-color: #555553;
+    box-shadow: 0.2px, 0.2px;
+    margin-bottom: 30px;
+}
+
+.text-get-in-touch {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    margin-top: 30px
+}
+
+.info-contact {
+    margin-top: 17px;
+    display: inline-block;
+    width: 256px;
+}
+
+.icon {
+    display: block;
+    width: max-content;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.icon p {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #46A37C;
+}
+
+@media (min-width: 440px) {
+    aside {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    aside {
+        display: block;
+    }
+}
