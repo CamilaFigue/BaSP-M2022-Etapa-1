@@ -20,17 +20,17 @@ window.onload = function () {
     }
 
     function blurEmail() {
-        var emailIsValid = mailformat.test(email.value);
+        emailIsValid = mailformat.test(email.value);
 
         if (!emailIsValid) {
+            emailIsValid = 2;
             invalidEmail.innerHTML = "The email is invalid";
             email.style.border = "3px solid red";
             invalidEmail.style.color = "red";
             invalidEmail.style.display = "flex";
-            emailIsValid = 2;
         } else {
-            email.style.border = "3px solid green";
             emailIsValid = 1;
+            email.style.border = "3px solid green";
         }
     }
 
@@ -62,14 +62,14 @@ window.onload = function () {
         passIsValid = validatePassword()
 
         if (!passIsValid) {
+            passIsValid = 2;
             invalidPass.innerHTML = "The password is invalid";
             password.style.border = "3px solid red";
             invalidPass.style.color = "red";
             invalidPass.style.display = "flex";
-            passIsValid = 2;
         } else {
-            password.style.border = "3px solid green";
             passIsValid = 1;
+            password.style.border = "3px solid green";
         }
     }
 
@@ -77,28 +77,47 @@ window.onload = function () {
     var btnConfirm = document.getElementById("sign-in-js");
     var close = document.getElementsByClassName("closeSpan");
 
+    var text = document.getElementById("emailPassModalText");
+    var modalTitle = document.getElementById("titleModal");
+
     btnConfirm.onclick = function (e) {
         e.preventDefault();
-        var text = document.getElementById("emailPassModalText");
-        var modalTitle = document.getElementById("titleModal");
+
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
+        url = url + '?email=' + email.value + '&password=' + password.value;
 
         modal.style.display = "block";
+        
         if (emailIsValid == 2) {
-            modalTitle.textContent = 'Logged fail';
-            text.textContent = 'Email: ' + email.value + ' is not valid';
+            modalTitle.textContent = "Logged fail";
+            text.textContent = "Email: " + email.value + " is not valid";
         } else if (passIsValid == 2) {
-            modalTitle.textContent = 'Login failed';
-            text.textContent = 'Password: ' + password.value + ' not valid';
-        } else {
-            modalTitle.textContent = 'Login Succefull';
-            text.textContent = "Email: " + email.value + " Password: " + password.value;
+            modalTitle.textContent = "Login failed";
+            text.textContent = "Password: " + password.value + " not valid";
+        } else if (emailIsValid == 1 && passIsValid == 1) {
+            fetch(url)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (responseJ) {
+                    if (responseJ.success){
+                    modalTitle.textContent = "Login Succefull";
+                    text.textContent = responseJ.msg;
+                    } else {
+                        modalTitle.textContent = "Login failed";
+                        text.textContent = responseJ.msg;
+                    }
+                })
+                .catch(function (error) {
+                    text.textContent = (error.erros[0].msg);
+                })
         }
     }
 
     close.onclick = function () {
         modal.style.display = "none";
     }
-    
+
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";

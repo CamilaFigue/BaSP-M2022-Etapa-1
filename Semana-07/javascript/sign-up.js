@@ -19,14 +19,6 @@ window.onload = function () {
         var fName = firstName.value;
         flagName = 1;
 
-        if (fName == "") {
-            containerFocusBlur[0].textContent = "Name cannot be empty";
-            firstName.style.border = "3px solid black";
-            firstName.style.color = "black";
-            containerFocusBlur[0].style = "color: red; font-size: 16px";
-            containerFocusBlur[0].style.display = "flex";
-        }
-
         for (var i = 0; i < fName.length; i++) {
             var letterName = fName.substring(i, i + 1);
 
@@ -35,6 +27,7 @@ window.onload = function () {
             }
 
         }
+
         if (flagName == 1) {
             firstName.style.border = "3px solid green";
             firstName.style.color = "black";
@@ -63,14 +56,6 @@ window.onload = function () {
     function blurlName() {
         var lName = lastName.value;
         flagLname = 1;
-
-        if (lName == "") {
-            containerFocusBlur[1].textContent = "Last Name cannot be empty";
-            lastName.style.border = "3px solid black";
-            lastName.style.color = "black";
-            containerFocusBlur[1].style = "color: red; font-size: 16px";
-            containerFocusBlur[1].style.display = "flex";
-        }
 
         for (var i = 0; i < lName.length; i++) {
 
@@ -109,14 +94,6 @@ window.onload = function () {
     function blurdNi() {
         var dNiValue = dNi.value;
 
-        if (dNiValue == "") {
-            containerFocusBlur[2].textContent = "DNI cannot be empty";
-            dNi.style.border = "3px solid black";
-            dNi.style.color = "black";
-            containerFocusBlur[2].style = "color: red; font-size: 16px";
-            containerFocusBlur[2].style.display = "flex";
-        }
-
         if (dNiValue.length > 6) {
             var countLetters = 0;
             for (var i = 0; i < dNiValue.length; i++) {
@@ -139,9 +116,9 @@ window.onload = function () {
                 containerFocusBlur[2].style = "color: red; font-size: 16px";
                 containerFocusBlur[2].style.display = "flex";
             } else {
+                flagDni = 1;
                 dNi.style.border = "3px solid green";
                 dNi.style.color = "black";
-                flagDni = 1;
             }
         } else {
             containerFocusBlur[2].textContent = "ID should contain more than 7 characters";
@@ -174,14 +151,6 @@ window.onload = function () {
         var secondSlash = birthdayValue.substring(5, 6);
         var year = birthdayValue.substring(6, 10);
 
-        if (birthdayValue.length == 0) {
-            containerFocusBlur[3].textContent = "Birthday cannot be empty";
-            birth.style.border = "3px solid black";
-            birth.style.color = "black";
-            containerFocusBlur[3].style = "color: red; font-size: 16px";
-            containerFocusBlur[3].style.display = "flex";
-        }
-
         day = Number(day);
         month = Number(month);
         year = Number(year);
@@ -211,14 +180,15 @@ window.onload = function () {
             containerFocusBlur[3].style = "color: red; font-size: 16px";
             containerFocusBlur[3].style.display = "flex";
         } else {
+            flagBirth = 1;
             birth.style.border = "3px solid green";
             birth.style.color = "black";
-            flagBirth = 1;
         }
     }
 
     /////////////////// TELEPHONE ///////////////////
     var phone = document.getElementById("telephone");
+
     var flagPhone = 0;
 
     phone.addEventListener("focus", focusPhone);
@@ -232,19 +202,11 @@ window.onload = function () {
     function blurPhone() {
         var phoneValue = phone.value;
 
-        if (phoneValue == "") {
-            containerFocusBlur[4].textContent = "Phone cannot be empty";
-            phone.style.border = "3px solid black";
-            phone.style.color = "black";
-            containerFocusBlur[4].style = "color: red; font-size: 16px";
-            containerFocusBlur[4].style.display = "flex";
-        }
-
         if ((phoneValue == Number(phoneValue)) && (phoneValue.length == 10)) {
+            flagPhone = 1;
             phone.style.border = "3px solid green";
             phone.style.color = "black";
             containerFocusBlur[4].textContent = "";
-            flagPhone = 1;
         } else {
             containerFocusBlur[4].textContent = "Telephone should contain 10 characters";
             phone.style.border = "3px solid red";
@@ -318,10 +280,10 @@ window.onload = function () {
                     containerFocusBlur[5].style = "color: red; font-size: 16px";
                     containerFocusBlur[5].style.display = "flex";
                 } else if (letterCount + spaceCount + numberCount == adressValue.length) {
+                    flagAdress = 1;
                     adreSs.style.border = "3px solid green";
                     adreSs.style.color = "black";
                     containerFocusBlur[5].textContent = "";
-                    flagAdress = 1;
                 } else {
                     containerFocusBlur[5].textContent = "The format is not valid, insert numbers and letters";
                     adreSs.style.border = "3px solid red";
@@ -386,10 +348,10 @@ window.onload = function () {
             containerFocusBlur[6].style = "color: red; font-size: 16px";
             containerFocusBlur[6].style.display = "flex";
         } else {
+            cityFlag = 1;
             city.style.border = "3px solid green";
             city.style.color = "black";
             containerFocusBlur[6].textContent = "";
-            cityFlag = 1;
         }
 
     }
@@ -419,10 +381,10 @@ window.onload = function () {
         }
 
         if ((codePostValue == Number(codePostValue)) && ((codePostValue.length == 4) || (codePostValue.length == 5))) {
+            codePostFlag = 1;
             codePost.style.border = "3px solid green";
             codePost.style.color = "black";
             containerFocusBlur[7].textContent = "";
-            codePostFlag = 1;
         } else {
             containerFocusBlur[7].textContent = "Code Post should contain 4 or 5 characters";
             codePost.style.border = "3px solid red";
@@ -464,10 +426,10 @@ window.onload = function () {
             containerFocusBlur[8].style = "color: red; font-size: 16px";
             containerFocusBlur[8].style.display = "flex";
         } else {
+            emailFlag = 1;
             email.style.border = "3px solid green";
             email.style.color = "black";
             containerFocusBlur[8].textContent = "";
-            emailFlag = 1;
         }
     }
 
@@ -521,10 +483,10 @@ window.onload = function () {
             containerFocusBlur[9].style = "color: red; font-size: 16px";
             containerFocusBlur[9].style.display = "flex";
         } else {
+            passFlag = 1;
             pass.style.border = "3px solid green";
             pass.style.color = "black";
             containerFocusBlur[9].textContent = "";
-            passFlag = 1;
         }
     }
 
@@ -554,10 +516,10 @@ window.onload = function () {
         }
 
         if (repeatPassValue == valuePassword) {
+            flagRepeat = 1;
             repeatPass.style.border = "3px solid green";
             repeatPass.style.color = "black";
             containerFocusBlur[10].textContent = "";
-            flagRepeat = 1;
         } else {
             containerFocusBlur[10].textContent = "The password is invalid, it need to be the same password";
             repeatPass.style.border = "3px solid red";
@@ -580,11 +542,13 @@ window.onload = function () {
         var textModal = document.getElementById("emailPassModalText");
 
         modal.style.display = "block";
-        if (flagName == 1 && flagLname == 1 && flagDni == 1 && flagBirth == 1 && flagPhone == 1 && flagAdress == 1 && flagRepeat == 1 && passFlag == 1 && emailFlag == 1 && codePostFlag == 1 && cityFlag == 1) {
+
+        if (flagName == 1 && flagLname == 1 && flagDni == 1 && flagBirth == 1 && flagPhone == 1 && flagAdress == 1 &&
+            flagRepeat == 1 && passFlag == 1 && emailFlag == 1 && codePostFlag == 1 && cityFlag == 1) {
             modalTitle.textContent = "Login Succefull";
             textModal.textContent = "User successfully created";
         } else {
-            modalTitle.textContent = 'Logged fail';
+            modalTitle.textContent = "Logged fail";
             textModal.textContent = "The fields cannot be empty";
         }
     }
