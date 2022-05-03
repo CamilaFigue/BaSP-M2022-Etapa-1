@@ -83,11 +83,11 @@ window.onload = function () {
     btnConfirm.onclick = function (e) {
         e.preventDefault();
 
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
-        url = url + '?email=' + email.value + '&password=' + password.value;
+        var url = "https://basp-m2022-api-rest-server.herokuapp.com/login";
+        url = url + "?email=" + email.value + "&password=" + password.value;
 
         modal.style.display = "block";
-        
+
         if (emailIsValid == 2) {
             modalTitle.textContent = "Logged fail";
             text.textContent = "Email: " + email.value + " is not valid";
@@ -100,16 +100,16 @@ window.onload = function () {
                     return response.json()
                 })
                 .then(function (responseJ) {
-                    if (responseJ.success){
-                    modalTitle.textContent = "Login Succefull";
-                    text.textContent = responseJ.msg;
-                    } else {
-                        modalTitle.textContent = "Login failed";
+                    if (responseJ.success) {
+                        modalTitle.textContent = "Login Succefull";
                         text.textContent = responseJ.msg;
+                    } else {
+                        throw (responseJ);
                     }
                 })
                 .catch(function (error) {
-                    text.textContent = (error.erros[0].msg);
+                    console.log(error);
+                    text.textContent = (error.msg);
                 })
         }
     }
