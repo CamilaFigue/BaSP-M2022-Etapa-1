@@ -110,6 +110,7 @@ window.onload = function () {
                 }
             }
             if (countLetters >= 1) {
+                flagDni = 0;
                 containerFocusBlur[2].textContent = "ID should only contain numbers";
                 dNi.style.border = "3px solid red";
                 dNi.style.color = "red";
@@ -121,6 +122,7 @@ window.onload = function () {
                 dNi.style.color = "black";
             }
         } else {
+            flagDni = 0;
             containerFocusBlur[2].textContent = "ID should contain more than 7 characters";
             dNi.style.border = "3px solid red";
             dNi.style.color = "red";
@@ -156,24 +158,28 @@ window.onload = function () {
         year = Number(year);
         console.log(day, month, year);
         if (day < 1 || day > 31) {
+            flagBirth = 0;
             containerFocusBlur[3].textContent = "The day is not valid";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
             containerFocusBlur[3].style.display = "flex";
         } else if (month < 1 || month > 12) {
+            flagBirth = 0;
             containerFocusBlur[3].textContent = "The month is not valid";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
             containerFocusBlur[3].style.display = "flex";
         } else if (year < 1900 || year > 2018) {
+            flagBirth = 0;
             containerFocusBlur[3].textContent = "The year is not valid";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
             containerFocusBlur[3].style.display = "flex";
         } else if (slash != "/" || secondSlash != "/") {
+            flagBirth = 0;
             containerFocusBlur[3].textContent = "The format is not valid, you need write XX/XX/XXXX";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
@@ -208,6 +214,7 @@ window.onload = function () {
             phone.style.color = "black";
             containerFocusBlur[4].textContent = "";
         } else {
+            flagPhone = 0;
             containerFocusBlur[4].textContent = "Telephone should contain 10 characters";
             phone.style.border = "3px solid red";
             phone.style.color = "red";
@@ -232,16 +239,8 @@ window.onload = function () {
     function blurAdress() {
         var adressValue = adreSs.value;
 
-        if (adressValue == "") {
-            containerFocusBlur[5].textContent = "Adress cannot be empty";
-            adreSs.style.border = "3px solid black";
-            adreSs.style.color = "black";
-            containerFocusBlur[5].style = "color: red; font-size: 16px";
-            containerFocusBlur[5].style.display = "flex";
-        }
-
         if (adressValue.length < 5) {
-            console.log(adressValue);
+            flagAdress = 0;
             containerFocusBlur[5].textContent = "The format is not valid, the adress need to have more than 5 caracters";
             adreSs.style.border = "3px solid red";
             adreSs.style.color = "red";
@@ -249,6 +248,7 @@ window.onload = function () {
             containerFocusBlur[5].style.display = "flex";
         } else {
             if (adressValue.indexOf(" ") === -1) {
+                flagAdress = 0;
                 containerFocusBlur[5].textContent = "The format is not valid, the adress need to have some space";
                 adreSs.style.border = "3px solid red";
                 adreSs.style.color = "red";
@@ -274,6 +274,7 @@ window.onload = function () {
                     }
                 }
                 if (letterCount == 0 || numberCount == 0) {
+                    flagAdress = 0;
                     containerFocusBlur[5].textContent = "The format is not valid, insert numbers and letters";
                     adreSs.style.border = "3px solid red";
                     adreSs.style.color = "red";
@@ -285,6 +286,7 @@ window.onload = function () {
                     adreSs.style.color = "black";
                     containerFocusBlur[5].textContent = "";
                 } else {
+                    flagAdress = 0;
                     containerFocusBlur[5].textContent = "The format is not valid, insert numbers and letters";
                     adreSs.style.border = "3px solid red";
                     adreSs.style.color = "red";
@@ -342,6 +344,7 @@ window.onload = function () {
         cityIsValid = validateCity();
 
         if (!cityIsValid) {
+            cityFlag = 0;
             containerFocusBlur[6].textContent = "The city is invalid, it needs to have more than 3 characters";
             city.style.border = "3px solid red";
             city.style.color = "red";
@@ -386,6 +389,7 @@ window.onload = function () {
             codePost.style.color = "black";
             containerFocusBlur[7].textContent = "";
         } else {
+            codePostFlag = 0;
             containerFocusBlur[7].textContent = "Code Post should contain 4 or 5 characters";
             codePost.style.border = "3px solid red";
             codePost.style.color = "red";
@@ -420,6 +424,7 @@ window.onload = function () {
         }
 
         if (!emailIsValid) {
+            emailFlag = 0;
             containerFocusBlur[8].textContent = "The email is invalid, it need to have this format example@example.com";
             email.style.border = "3px solid red";
             email.style.color = "red";
@@ -477,6 +482,7 @@ window.onload = function () {
         }
 
         if (!passIsValid) {
+            passFlag = 0;
             containerFocusBlur[9].textContent = "The password is invalid, it need to have numbers and letter only";
             pass.style.border = "3px solid red";
             pass.style.color = "red";
@@ -521,6 +527,7 @@ window.onload = function () {
             repeatPass.style.color = "black";
             containerFocusBlur[10].textContent = "";
         } else {
+            passFlag = 0;
             containerFocusBlur[10].textContent = "The password is invalid, it need to be the same password";
             repeatPass.style.border = "3px solid red";
             repeatPass.style.color = "red";
@@ -531,32 +538,108 @@ window.onload = function () {
 
     /////////////////// BOTON CONFIRM ///////////////////
     var confirmBtn = document.getElementById("btnConfirm");
-
     var modal = document.getElementById("myModal");
     var close = document.getElementsByClassName("closeSpan");
+
+    var modalTitle = document.getElementById("titleModal");
+    var text = document.getElementById("emailPassModalText");
 
     confirmBtn.onclick = function (e) {
         e.preventDefault();
 
-        var modalTitle = document.getElementById("titleModal");
-        var textModal = document.getElementById("emailPassModalText");
-
         modal.style.display = "block";
 
-        if (flagName == 1 && flagLname == 1 && flagDni == 1 && flagBirth == 1 && flagPhone == 1 && flagAdress == 1 &&
+        var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
+        url = url + "?name=" + firstName.value + "&lastName=" + lastName.value + "&dni=" + dNi.value + "&dob=" + birth.value + "&phone=" + phone.value + "&address=" +
+        adreSs.value + "&city=" + city.value + "&zip=" + codePost.value + "&email=" + email.value + "&password=" + pass.value;
+
+        if (flagName == 0) {
+            modalTitle.textContent = "The name is not valid";
+            text.textContent = "Name: " + firstName.value + " is not valid";
+        } else if (flagLname == 0) {
+            modalTitle.textContent = "The surname is not valid";
+            text.textContent = "Surname: " + lastName.value + " is not valid";
+        } else if (flagDni == 0) {
+            modalTitle.textContent = "The DNI is not valid";
+            text.textContent = "DNI: " + dNi.value + " is not valid";
+        } else if (flagBirth == 0) {
+            modalTitle.textContent = "The date of birthday is not valid";
+            text.textContent = "Date of birthday: " + birth.value + " is not valid";
+        } else if (flagPhone == 0) {
+            modalTitle.textContent = "The phone is not valid";
+            text.textContent = "Phone: " + phone.value + " is not valid";
+        } else if (flagAdress == 0) {
+            modalTitle.textContent = "The adress is not valid";
+            text.textContent = "Adress: " + adreSs.value + " is not valid";
+        } else if (cityFlag == 0) {
+            modalTitle.textContent = "The city is not valid";
+            text.textContent = "City: " + city.value + " is not valid";
+        } else if (codePostFlag == 0) {
+            modalTitle.textContent = "The Post Code is not valid";
+            text.textContent = "Date of birthday: " + codePost.value + " is not valid";
+        } else if (emailFlag == 0) {
+            modalTitle.textContent = "The email is not valid";
+            text.textContent = "Email: " + email.value + " is not valid";
+        } else if (passFlag == 0) {
+            modalTitle.textContent = "The password is not valid";
+            text.textContent = "Password: " + pass.value + " is not valid";
+        } else if (flagRepeat == 0) {
+            modalTitle.textContent = "The Password Repeat is not valid";
+            text.textContent = "Date of birthday: " + repeatPass.value + " is not valid";
+        } else if (pass.value !== repeatPass.value) {
+            modalTitle.textContent = "The passwords not match";
+            text.textContent = "The passwords not match, please try again";
+
+        } else if (flagName == 1 && flagLname == 1 && flagDni == 1 && flagBirth == 1 && flagPhone == 1 && flagAdress == 1 &&
             flagRepeat == 1 && passFlag == 1 && emailFlag == 1 && codePostFlag == 1 && cityFlag == 1) {
-            modalTitle.textContent = "Login Succefull";
-            textModal.textContent = "User successfully created";
-        } else {
-            modalTitle.textContent = "Logged fail";
-            textModal.textContent = "The fields cannot be empty";
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (responseJ) {
+                    if (responseJ.success) {
+                        modalTitle.textContent = responseJ.msg;
+                        text.textContent = "Name: " + responseJ.data.name + " Surname: " + responseJ.data.lastName +
+                        " DNI: " + responseJ.data.dni + " Date of birthday: " + responseJ.data.dob + " Phone: " + responseJ.data.phone +
+                        " Address: " + responseJ.data.address + " City: " + responseJ.data.city + " Post Code: " + responseJ.data.zip +
+                        " Email: " + responseJ.data.email + " Password: " + responseJ.data.password;
+                        // text.textContent = "Surname " + responseJ.data.lastName;
+                        // text.textContent = "DNI " + responseJ.data.dni;
+                        // text.textContent = "Date of birthday " + responseJ.data.dob;
+                        // text.textContent = "Phone " + responseJ.data.phone;
+                        // text.textContent = "Address " + responseJ.data.address;
+                        // text.textContent = "City " + responseJ.data.city;
+                        // text.textContent = "Post Code " + responseJ.data.zip;
+                        // text.textContent = "Email " + responseJ.data.email;
+                        // text.textContent = "Password " + responseJ.data.password;
+
+                        localStorage.setItem("Name ", responseJ.data.name);
+                        localStorage.setItem("Surname ", responseJ.data.lastName);
+                        localStorage.setItem("DNI ", responseJ.data.dni);
+                        localStorage.setItem("Birthday ", responseJ.data.dob);
+                        localStorage.setItem("Phone ", responseJ.data.phone);
+                        localStorage.setItem("Address ", responseJ.data.address);
+                        localStorage.setItem("City ", responseJ.data.city);
+                        localStorage.setItem("Post Code ", responseJ.data.zip);
+                        localStorage.setItem("Email ", responseJ.data.email);
+                        localStorage.setItem("Password ", responseJ.data.password);
+                    }
+                    else {
+                        throw (responseJ);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    text.textContent = (error.msg);
+                })
         }
     }
 
     close.onclick = function () {
         modal.style.display = "none";
     }
-    
+
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
