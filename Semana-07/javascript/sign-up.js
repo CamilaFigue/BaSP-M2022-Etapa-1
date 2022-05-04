@@ -11,7 +11,7 @@ window.onload = function () {
     firstName.addEventListener("blur", blurfName);
 
     function focusfName() {
-        containerFocusBlur[0].style.display = "none";
+        containerFocusBlur[0].style.display = "";
         firstName.style.backgroundColor = "#DCDCDC";
     }
 
@@ -50,7 +50,6 @@ window.onload = function () {
             firstName.style.border = "3px solid red";
             firstName.style.color = "red";
             containerFocusBlur[0].style = "color: red; font-size: 16px";
-            containerFocusBlur[0].style.display = "flex";
         }
     }
 
@@ -63,7 +62,7 @@ window.onload = function () {
     lastName.addEventListener("blur", blurlName);
 
     function focuslName() {
-        containerFocusBlur[1].style.display = "none";
+        containerFocusBlur[1].style.display = "";
         lastName.style.backgroundColor = "#DCDCDC";
     }
 
@@ -100,7 +99,6 @@ window.onload = function () {
             lastName.style.border = "3px solid red";
             lastName.style.color = "red";
             containerFocusBlur[1].style = "color: red; font-size: 16px";
-            containerFocusBlur[1].style.display = "flex";
         }
     }
 
@@ -113,7 +111,7 @@ window.onload = function () {
     dNi.addEventListener("blur", blurdNi);
 
     function focusdNi() {
-        containerFocusBlur[2].style.display = "none";
+        containerFocusBlur[2].style.display = "";
         dNi.style.backgroundColor = "#DCDCDC";
     }
 
@@ -141,7 +139,6 @@ window.onload = function () {
                 dNi.style.border = "3px solid red";
                 dNi.style.color = "red";
                 containerFocusBlur[2].style = "color: red; font-size: 16px";
-                containerFocusBlur[2].style.display = "flex";
             } else {
                 flagDni = 1;
                 dNi.style.border = "3px solid green";
@@ -153,7 +150,6 @@ window.onload = function () {
             dNi.style.border = "3px solid red";
             dNi.style.color = "red";
             containerFocusBlur[2].style = "color: red; font-size: 16px";
-            containerFocusBlur[2].style.display = "flex";
         }
     }
 
@@ -166,7 +162,7 @@ window.onload = function () {
     birth.addEventListener("blur", blurBirth);
 
     function focusBirth() {
-        containerFocusBlur[3].style.display = "none";
+        containerFocusBlur[3].style.display = "";
         birth.style.backgroundColor = "#DCDCDC";
     }
 
@@ -189,28 +185,24 @@ window.onload = function () {
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
-            containerFocusBlur[3].style.display = "flex";
         } else if (month < 1 || month > 12) {
             flagBirth = 0;
             containerFocusBlur[3].textContent = "The month is not valid";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
-            containerFocusBlur[3].style.display = "flex";
         } else if (year < 1900 || year > 2018) {
             flagBirth = 0;
             containerFocusBlur[3].textContent = "The year is not valid";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
-            containerFocusBlur[3].style.display = "flex";
         } else if (slash != "/" || secondSlash != "/") {
             flagBirth = 0;
             containerFocusBlur[3].textContent = "The format is not valid, you need write XX/XX/XXXX";
             birth.style.border = "3px solid red";
             birth.style.color = "red";
             containerFocusBlur[3].style = "color: red; font-size: 16px";
-            containerFocusBlur[3].style.display = "flex";
         } else {
             flagBirth = 1;
             birth.style.border = "3px solid green";
@@ -227,7 +219,7 @@ window.onload = function () {
     phone.addEventListener("blur", blurPhone);
 
     function focusPhone() {
-        containerFocusBlur[4].style.display = "none";
+        containerFocusBlur[4].style.display = "";
         phone.style.backgroundColor = "#DCDCDC";
     }
 
@@ -245,7 +237,6 @@ window.onload = function () {
             phone.style.border = "3px solid red";
             phone.style.color = "red";
             containerFocusBlur[4].style = "color: red; font-size: 16px";
-            containerFocusBlur[4].style.display = "flex";
         }
     }
 
@@ -258,7 +249,7 @@ window.onload = function () {
     adreSs.addEventListener("blur", blurAdress);
 
     function focusAdress() {
-        containerFocusBlur[5].style.display = "none";
+        containerFocusBlur[5].style.display = "";
         adreSs.style.backgroundColor = "#DCDCDC";
     }
 
@@ -271,7 +262,6 @@ window.onload = function () {
             adreSs.style.border = "3px solid red";
             adreSs.style.color = "red";
             containerFocusBlur[5].style = "color: red; font-size: 16px";
-            containerFocusBlur[5].style.display = "flex";
         } else {
             if (adressValue.indexOf(" ") === -1) {
                 flagAdress = 0;
@@ -279,7 +269,6 @@ window.onload = function () {
                 adreSs.style.border = "3px solid red";
                 adreSs.style.color = "red";
                 containerFocusBlur[5].style = "color: red; font-size: 16px";
-                containerFocusBlur[5].style.display = "flex";
             } else {
                 var letterCount = 0;
                 var spaceCount = 0;
@@ -305,7 +294,6 @@ window.onload = function () {
                     adreSs.style.border = "3px solid red";
                     adreSs.style.color = "red";
                     containerFocusBlur[5].style = "color: red; font-size: 16px";
-                    containerFocusBlur[5].style.display = "flex";
                 } else if (letterCount + spaceCount + numberCount == adressValue.length) {
                     flagAdress = 1;
                     adreSs.style.border = "3px solid green";
@@ -317,7 +305,6 @@ window.onload = function () {
                     adreSs.style.border = "3px solid red";
                     adreSs.style.color = "red";
                     containerFocusBlur[5].style = "color: red; font-size: 16px";
-                    containerFocusBlur[5].style.display = "flex";
                 }
             }
         }
@@ -333,7 +320,7 @@ window.onload = function () {
     city.addEventListener("blur", blurCity);
 
     function focusCity() {
-        containerFocusBlur[6].style.display = "none";
+        containerFocusBlur[6].style.display = "";
         city.style.backgroundColor = "#DCDCDC";
     }
 
@@ -367,7 +354,6 @@ window.onload = function () {
             city.style.border = "3px solid red";
             city.style.color = "red";
             containerFocusBlur[6].style = "color: red; font-size: 16px";
-            containerFocusBlur[6].style.display = "flex";
         } else {
             cityFlag = 1;
             city.style.border = "3px solid green";
@@ -386,7 +372,7 @@ window.onload = function () {
     codePost.addEventListener("blur", blurCodePost);
 
     function focusCodePost() {
-        containerFocusBlur[7].style.display = "none";
+        containerFocusBlur[7].style.display = "";
         codePost.style.backgroundColor = "#DCDCDC";
     }
 
@@ -404,7 +390,6 @@ window.onload = function () {
             codePost.style.border = "3px solid red";
             codePost.style.color = "red";
             containerFocusBlur[7].style = "color: red; font-size: 16px";
-            containerFocusBlur[7].style.display = "flex";
         }
     }
 
@@ -418,7 +403,7 @@ window.onload = function () {
     email.addEventListener("blur", blurEmail);
 
     function focusEmail() {
-        containerFocusBlur[8].style.display = "none";
+        containerFocusBlur[8].style.display = "";
         email.style.backgroundColor = "#DCDCDC";
     }
 
@@ -431,7 +416,6 @@ window.onload = function () {
             email.style.border = "3px solid red";
             email.style.color = "red";
             containerFocusBlur[8].style = "color: red; font-size: 16px";
-            containerFocusBlur[8].style.display = "flex";
         } else {
             emailFlag = 1;
             email.style.border = "3px solid green";
@@ -449,7 +433,7 @@ window.onload = function () {
     pass.addEventListener("blur", blurPass);
 
     function focusPass() {
-        containerFocusBlur[9].style.display = "none";
+        containerFocusBlur[9].style.display = "";
         pass.style.backgroundColor = "#DCDCDC";
     }
 
@@ -481,7 +465,6 @@ window.onload = function () {
             pass.style.border = "3px solid red";
             pass.style.color = "red";
             containerFocusBlur[9].style = "color: red; font-size: 16px";
-            containerFocusBlur[9].style.display = "flex";
         } else {
             passFlag = 1;
             pass.style.border = "3px solid green";
@@ -499,7 +482,7 @@ window.onload = function () {
     repeatPass.addEventListener("blur", blurRepeatPass);
 
     function focusRepeatPass() {
-        containerFocusBlur[10].style.display = "none";
+        containerFocusBlur[10].style.display = "";
         repeatPass.style.backgroundColor = "#DCDCDC";
     }
 
@@ -518,7 +501,6 @@ window.onload = function () {
             repeatPass.style.border = "3px solid red";
             repeatPass.style.color = "red";
             containerFocusBlur[10].style = "color: red; font-size: 16px";
-            containerFocusBlur[10].style.display = "flex";
         }
     }
 
