@@ -17,22 +17,36 @@ window.onload = function () {
 
     function blurfName() {
         var fName = firstName.value;
+
+        var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var letter = 0;
+
+
         flagName = 1;
 
-        for (var i = 0; i < fName.length; i++) {
-            var letterName = fName.substring(i, i + 1);
+        if (fName.length > 3) {
+            for (var i = 0; i < fName.length; i++) {
 
-            if (letterName == Number(letterName)) {
-                flagName = 2;
+                var letterName = fName.substring(i, i + 1);
+
+                if (valid.indexOf(letterName) != -1) {
+                    letter += 1;
+                }
+                else if (letterName == Number(letterName)) {
+                    flagName = 0;
+                }
             }
-
+        } else {
+            flagName = 0;
         }
 
-        if (flagName == 1) {
+        if (flagName == 1 && letter == fName.length) {
+            flagName = 1;
             firstName.style.border = "3px solid green";
             firstName.style.color = "black";
         } else {
-            containerFocusBlur[0].textContent = "The email is invalid";
+            flagName = 0;
+            containerFocusBlur[0].textContent = "The name is invalid";
             firstName.style.border = "3px solid red";
             firstName.style.color = "red";
             containerFocusBlur[0].style = "color: red; font-size: 16px";
@@ -55,22 +69,34 @@ window.onload = function () {
 
     function blurlName() {
         var lName = lastName.value;
+
+        var validLastName = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var letterLastName = 0;    
+
         flagLname = 1;
 
-        for (var i = 0; i < lName.length; i++) {
+        if (lName.length > 3) {
+            for (var i = 0; i < lName.length; i++) {
 
-            var letterLname = lName.substring(i, i + 1);
+                var letterLname = lName.substring(i, i + 1);
 
-            if (letterLname == Number(letterLname)) {
-                flagLname = 2;
+                if (validLastName.indexOf(letterLname) != -1) {
+                    letterLastName += 1;
+                } else if (letterLname == Number(letterLname)) {
+                    flagLname = 0;
+                }
             }
-
+        } else {
+            flagLname = 0;
         }
-        if (flagLname == 1) {
+
+        if (flagLname == 1 && letterLastName == lName.length) {
+            flagLname = 1;
             lastName.style.border = "3px solid green";
             lastName.style.color = "black";
         } else {
-            containerFocusBlur[1].textContent = "The Password is invalid";
+            flagLname = 0;
+            containerFocusBlur[1].textContent = "The last name is invalid";
             lastName.style.border = "3px solid red";
             lastName.style.color = "red";
             containerFocusBlur[1].style = "color: red; font-size: 16px";
@@ -94,7 +120,7 @@ window.onload = function () {
     function blurdNi() {
         var dNiValue = dNi.value;
 
-        if (dNiValue.length > 6) {
+        if (dNiValue.length == 7 || dNiValue.length == 8) {
             var countLetters = 0;
             for (var i = 0; i < dNiValue.length; i++) {
                 var letter = dNiValue.substring(i, i + 1);
@@ -123,7 +149,7 @@ window.onload = function () {
             }
         } else {
             flagDni = 0;
-            containerFocusBlur[2].textContent = "ID should contain more than 7 characters";
+            containerFocusBlur[2].textContent = "ID should contain than 7 or 8 characters";
             dNi.style.border = "3px solid red";
             dNi.style.color = "red";
             containerFocusBlur[2].style = "color: red; font-size: 16px";
@@ -147,9 +173,9 @@ window.onload = function () {
     function blurBirth() {
         var birthdayValue = birth.value;
 
-        var day = birthdayValue.substring(0, 2);
+        var month = birthdayValue.substring(0, 2);
         var slash = birthdayValue.substring(2, 3);
-        var month = birthdayValue.substring(3, 5);
+        var day = birthdayValue.substring(3, 5);
         var secondSlash = birthdayValue.substring(5, 6);
         var year = birthdayValue.substring(6, 10);
 
@@ -333,14 +359,6 @@ window.onload = function () {
 
     function blurCity() {
 
-        if (city.value == "") {
-            containerFocusBlur[6].textContent = "City cannot be empty";
-            city.style.border = "3px solid black";
-            city.style.color = "black";
-            containerFocusBlur[6].style = "color: red; font-size: 16px";
-            containerFocusBlur[6].style.display = "flex";
-        }
-
         cityIsValid = validateCity();
 
         if (!cityIsValid) {
@@ -375,14 +393,6 @@ window.onload = function () {
     function blurCodePost() {
         var codePostValue = codePost.value;
 
-        if (codePostValue == "") {
-            containerFocusBlur[7].textContent = "City cannot be empty";
-            codePost.style.border = "3px solid black";
-            codePost.style.color = "black";
-            containerFocusBlur[7].style = "color: red; font-size: 16px";
-            containerFocusBlur[7].style.display = "flex";
-        }
-
         if ((codePostValue == Number(codePostValue)) && ((codePostValue.length == 4) || (codePostValue.length == 5))) {
             codePostFlag = 1;
             codePost.style.border = "3px solid green";
@@ -414,14 +424,6 @@ window.onload = function () {
 
     function blurEmail() {
         var emailIsValid = mailformat.test(email.value);
-
-        if (email.value == "") {
-            containerFocusBlur[8].textContent = "Email cannot be empty";
-            email.style.border = "3px solid black";
-            email.style.color = "black";
-            containerFocusBlur[8].style = "color: red; font-size: 16px";
-            containerFocusBlur[8].style.display = "flex";
-        }
 
         if (!emailIsValid) {
             emailFlag = 0;
@@ -473,14 +475,6 @@ window.onload = function () {
     function blurPass() {
         passIsValid = validatePassword();
 
-        if (pass.value == "") {
-            containerFocusBlur[9].textContent = "Password cannot be empty";
-            pass.style.border = "3px solid black";
-            pass.style.color = "black";
-            containerFocusBlur[9].style = "color: red; font-size: 16px";
-            containerFocusBlur[9].style.display = "flex";
-        }
-
         if (!passIsValid) {
             passFlag = 0;
             containerFocusBlur[9].textContent = "The password is invalid, it need to have numbers and letter only";
@@ -513,14 +507,6 @@ window.onload = function () {
         var repeatPassValue = repeatPass.value;
         var valuePassword = pass.value;
 
-        if (repeatPass == "") {
-            containerFocusBlur[10].textContent = "Repeat Password cannot be empty";
-            repeatPass.style.border = "3px solid black";
-            repeatPass.style.color = "black";
-            containerFocusBlur[10].style = "color: red; font-size: 16px";
-            containerFocusBlur[10].style.display = "flex";
-        }
-
         if (repeatPassValue == valuePassword) {
             flagRepeat = 1;
             repeatPass.style.border = "3px solid green";
@@ -543,6 +529,7 @@ window.onload = function () {
 
     var modalTitle = document.getElementById("titleModal");
     var text = document.getElementById("emailPassModalText");
+    var textModal = document.getElementsByClassName("modalText");
 
     confirmBtn.onclick = function (e) {
         e.preventDefault();
@@ -551,7 +538,7 @@ window.onload = function () {
 
         var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
         url = url + "?name=" + firstName.value + "&lastName=" + lastName.value + "&dni=" + dNi.value + "&dob=" + birth.value + "&phone=" + phone.value + "&address=" +
-        adreSs.value + "&city=" + city.value + "&zip=" + codePost.value + "&email=" + email.value + "&password=" + pass.value;
+            adreSs.value + "&city=" + city.value + "&zip=" + codePost.value + "&email=" + email.value + "&password=" + pass.value;
 
         if (flagName == 0) {
             modalTitle.textContent = "The name is not valid";
@@ -599,20 +586,19 @@ window.onload = function () {
                 })
                 .then(function (responseJ) {
                     if (responseJ.success) {
+
                         modalTitle.textContent = responseJ.msg;
-                        text.textContent = "Name: " + responseJ.data.name + " Surname: " + responseJ.data.lastName +
-                        " DNI: " + responseJ.data.dni + " Date of birthday: " + responseJ.data.dob + " Phone: " + responseJ.data.phone +
-                        " Address: " + responseJ.data.address + " City: " + responseJ.data.city + " Post Code: " + responseJ.data.zip +
-                        " Email: " + responseJ.data.email + " Password: " + responseJ.data.password;
-                        // text.textContent = "Surname " + responseJ.data.lastName;
-                        // text.textContent = "DNI " + responseJ.data.dni;
-                        // text.textContent = "Date of birthday " + responseJ.data.dob;
-                        // text.textContent = "Phone " + responseJ.data.phone;
-                        // text.textContent = "Address " + responseJ.data.address;
-                        // text.textContent = "City " + responseJ.data.city;
-                        // text.textContent = "Post Code " + responseJ.data.zip;
-                        // text.textContent = "Email " + responseJ.data.email;
-                        // text.textContent = "Password " + responseJ.data.password;
+
+                        text.textContent = "Name: " + responseJ.data.name;
+                        textModal[0].textContent = "Surname: " + responseJ.data.lastName;
+                        textModal[1].textContent = "DNI: " + responseJ.data.dni;
+                        textModal[2].textContent = "Date of birthday: " + responseJ.data.dob;
+                        textModal[3].textContent = "Phone: " + responseJ.data.phone;
+                        textModal[4].textContent = "Address: " + responseJ.data.address;
+                        textModal[5].textContent = "City: " + responseJ.data.city;
+                        textModal[6].textContent = "Post Code: " + responseJ.data.zip;
+                        textModal[7].textContent = "Email: " + responseJ.data.email;
+                        textModal[8].textContent = "Password: " + responseJ.data.password;
 
                         localStorage.setItem("Name ", responseJ.data.name);
                         localStorage.setItem("Surname ", responseJ.data.lastName);
@@ -624,14 +610,12 @@ window.onload = function () {
                         localStorage.setItem("Post Code ", responseJ.data.zip);
                         localStorage.setItem("Email ", responseJ.data.email);
                         localStorage.setItem("Password ", responseJ.data.password);
-                    }
-                    else {
-                        throw (responseJ);
+                        localStorage.setItem("Repeat password ", responseJ.data.password);
+
                     }
                 })
                 .catch(function (error) {
                     console.log(error);
-                    text.textContent = (error.msg);
                 })
         }
     }
@@ -644,6 +628,20 @@ window.onload = function () {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+
+    if (localStorage.length != 0) {
+        firstName.setAttribute("value", localStorage.getItem("Name "));
+        lastName.setAttribute("value", localStorage.getItem("Surname "));
+        dNi.setAttribute("value", localStorage.getItem("DNI "));
+        birth.setAttribute("value", localStorage.getItem("Birthday "));
+        phone.setAttribute("value", localStorage.getItem("Phone "));
+        adreSs.setAttribute("value", localStorage.getItem("Address "));
+        city.setAttribute("value", localStorage.getItem("City "));
+        codePost.setAttribute("value", localStorage.getItem("Post Code "));
+        email.setAttribute("value", localStorage.getItem("Email "));
+        pass.setAttribute("value", localStorage.getItem("Password "));
+        repeatPass.setAttribute("value", localStorage.getItem("Repeat password "));      
     }
 
 }
