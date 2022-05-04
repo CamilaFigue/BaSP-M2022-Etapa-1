@@ -89,10 +89,10 @@ window.onload = function () {
         modal.style.display = "block";
 
         if (emailIsValid == 2) {
-            modalTitle.textContent = "Logged fail";
+            modalTitle.textContent = "Login Failed";
             text.textContent = "Email: " + email.value + " is not valid";
         } else if (passIsValid == 2) {
-            modalTitle.textContent = "Login failed";
+            modalTitle.textContent = "Login Failed";
             text.textContent = "Password: " + password.value + " not valid";
         } else if (emailIsValid == 1 && passIsValid == 1) {
             fetch(url)
@@ -109,6 +109,7 @@ window.onload = function () {
                 })
                 .catch(function (error) {
                     console.log(error);
+                    modalTitle.textContent = "Login Failed";
                     text.textContent = (error.msg);
                 })
         }
